@@ -1,0 +1,44 @@
+baseURL = "https://fkconsulting.netlify.app/"
+languageCode = "sk"
+title = "FKConsulting"
+theme = "PaperMod"
+paginate = 10
+
+[params]
+  env = "production"
+  title = "FKConsulting"
+  description = "BI Consulting & Analytics — sledovanie leteckej dopravy VIE/BTS dátami, nie titulkami"
+  ShowReadingTime = true
+  ShowShareButtons = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowToc = true
+  comments = false
+
+  [params.label]
+    text = "FKConsulting"
+    icon = "images/logo.png"
+    iconHeight = 32
+
+  [params.homeInfoParams]
+    Title = "FKConsulting"
+    Content = "BI konzultácie a analytika. Aktuálne sledujem leteckú dopravu medzi Viedňou a Bratislavou — živými dátami, nie titulkami."
+
+[[menu.main]]
+  identifier = "posts"
+  name = "Články"
+  url = "/posts/"
+  weight = 10
+
+[[menu.main]]
+  identifier = "dashboard"
+  name = "Dashboard"
+  url = "/dashboard/"
+  weight = 20
+
+[[menu.main]]
+  identifier = "about"
+  name = "O projekte"
+  url = "/about/"
+  weight = 30
