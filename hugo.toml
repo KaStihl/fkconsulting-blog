@@ -7,7 +7,7 @@ paginate = 10
 [params]
   env = "production"
   title = "FKConsulting"
-  description = "BI Consulting & Analytics — sledovanie leteckej dopravy VIE/BTS dátami, nie titulkami"
+  description = "BI konzultácie, analytika a dátové projekty"
   ShowReadingTime = true
   ShowShareButtons = true
   ShowPostNavLinks = true
@@ -23,7 +23,7 @@ paginate = 10
 
   [params.homeInfoParams]
     Title = "FKConsulting"
-    Content = "BI konzultácie a analytika. Aktuálne sledujem leteckú dopravu medzi Viedňou a Bratislavou — živými dátami, nie titulkami."
+    Content = "BI konzultácie a analytika — Power BI, automatizácia a dátové projekty. Aktuálny projekt: sledovanie leteckej dopravy medzi Viedňou a Bratislavou živými dátami."
 
 [[menu.main]]
   identifier = "posts"
@@ -32,13 +32,13 @@ paginate = 10
   weight = 10
 
 [[menu.main]]
-  identifier = "dashboard"
-  name = "Dashboard"
-  url = "/dashboard/"
+  identifier = "projekty"
+  name = "Projekty"
+  url = "/projekty/"
   weight = 20
 
 [[menu.main]]
-  identifier = "about"
-  name = "O projekte"
-  url = "/about/"
+  identifier = "dashboard"
+  name = "Dashboard"
+  url = "/dashboard/"
   weight = 30
