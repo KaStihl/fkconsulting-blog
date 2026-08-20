@@ -1,4 +1,4 @@
-baseURL = "https://fkconsulting.netlify.app/"
+baseURL = "https://fkconsult.eu/"
 languageCode = "sk"
 title = "FKConsulting"
 theme = "PaperMod"
@@ -22,8 +22,8 @@ paginate = 10
     iconHeight = 32
 
   [params.homeInfoParams]
-    Title = "FKConsulting"
-    Content = "BI konzultácie a analytika — Power BI, automatizácia a dátové projekty. Aktuálny projekt: sledovanie leteckej dopravy medzi Viedňou a Bratislavou živými dátami."
+    Title = ""
+    Content = "![logo](/images/logo-horizontal.png)\n\nBI konzultácie a analytika — Power BI, automatizácia a dátové projekty. Aktuálny projekt: sledovanie leteckej dopravy medzi Viedňou a Bratislavou živými dátami."
 
 [[menu.main]]
   identifier = "posts"
