@@ -140,7 +140,7 @@ BI-Beratung und Analytik für kleine und mittlere Unternehmen — **Power BI Das
   disableThemeToggle = false
   displayFullLangName = true
   ShowReadingTime = true
-  ShowShareButtons = true
+  ShowShareButtons = false
   ShowPostNavLinks = true
   ShowBreadCrumbs = true
   ShowCodeCopyButtons = true
