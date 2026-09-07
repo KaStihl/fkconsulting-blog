@@ -128,65 +128,83 @@ body {
   right: 0;
 }
 
-/* Mobile nav: hamburger toggle, pure CSS (works with JS off).
-   The menu overflows and needs a horizontal scrollbar once it
-   holds 5 items + a language switcher, so below this width it
-   collapses behind a toggle instead. Generous margin here on
-   purpose: how much horizontal space 5 links + a language switcher
-   actually need varies with the visitor's OS font rendering, so
-   this triggers well before real-world layouts would ever get
-   tight, rather than being tuned to a single test environment. */
+/* Nav: hamburger + dropdown, on every screen size (not just mobile).
+   Kept width-independent on purpose, after the horizontal menu proved
+   unreliable in the wild — how much room 5 links + a language switcher
+   need varies enough across browsers/OSes that no single breakpoint
+   was trustworthy. Pure CSS checkbox pattern, so it still works with
+   JavaScript disabled. */
+.header-nav {
+  position: relative;
+  min-height: 38px;
+}
+.logo {
+  margin-inline-end: 50px;
+}
 .fk-nav-toggle-input {
   position: absolute;
   opacity: 0;
   pointer-events: none;
 }
 .fk-menu-toggle {
+  /* Pinned to the nav's own top-right corner, out of normal flow,
+     so it can never get pushed left or wrap onto its own line when
+     the logo/theme-toggle/language-switcher block wraps on narrow
+     screens. */
+  position: absolute;
+  top: 0;
+  right: var(--gap);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--primary);
+  cursor: pointer;
+}
+.fk-menu-toggle .fk-icon-close {
   display: none;
 }
-@media (max-width: 1300px) {
-  .fk-menu-toggle {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 38px;
-    height: 38px;
-    margin-inline-start: auto;
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    color: var(--primary);
-    cursor: pointer;
-  }
-  .fk-menu-toggle .fk-icon-close {
-    display: none;
-  }
-  .fk-nav-toggle-input:checked ~ .fk-menu-toggle .fk-icon-open {
-    display: none;
-  }
-  .fk-nav-toggle-input:checked ~ .fk-menu-toggle .fk-icon-close {
-    display: block;
-  }
-  .menu {
-    display: none;
-    flex-basis: 100%;
-    flex-direction: column;
-    overflow: visible;
-    white-space: normal;
-    row-gap: 2px;
-    margin-top: 8px;
-    padding-top: 12px;
-    border-top: 1px solid var(--border);
-  }
-  .fk-nav-toggle-input:checked ~ .menu {
-    display: flex;
-  }
-  .menu li {
-    width: 100%;
-  }
-  .menu a {
-    display: block;
-    padding: 10px 2px;
-  }
+.fk-nav-toggle-input:checked ~ .fk-menu-toggle .fk-icon-open {
+  display: none;
+}
+.fk-nav-toggle-input:checked ~ .fk-menu-toggle .fk-icon-close {
+  display: block;
+}
+.menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: var(--gap);
+  z-index: 50;
+  margin-top: 10px;
+  flex-direction: column;
+  row-gap: 2px;
+  min-width: 200px;
+  max-width: calc(100vw - var(--gap) * 2);
+  overflow: visible;
+  white-space: normal;
+  background: var(--theme);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--fk-shadow);
+  padding: 8px;
+}
+.fk-nav-toggle-input:checked ~ .menu {
+  display: flex;
+}
+.menu li {
+  width: 100%;
+}
+.menu a {
+  display: block;
+  padding: 10px 12px;
+  border-radius: 6px;
+}
+.menu a:hover {
+  background: var(--entry);
 }
 
 /* ============================================================
