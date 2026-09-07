@@ -11,7 +11,7 @@ ShowBreadCrumbs: true
 
 Ein Live-Blick auf die Daten hinter dem **[VIE/BTS Aviation Tracker](/projekty/vie-bts-tracker/)** — monatliche Passagierzahlen der Flughäfen Wien und Bratislava, basierend auf offiziellen Quellen und automatisch aktualisiert.
 
-{{< dashboard-embed src="https://app.powerbi.com/reportEmbed?reportId=7f9d218c-0c56-4f31-8343-9e81e8a2a786&autoAuth=true&ctid=f67219e2-e295-431e-a99c-4d421e15d03a" title="VIE/BTS Aviation Tracker — Power BI" height="620" >}}
+{{< dashboard-embed src="https://app.powerbi.com/view?r=eyJrIjoiOWM2NDFkN2ItY2E5Ni00NzFkLTgzMTMtM2NjNTNlNTI1Y2EzIiwidCI6ImY2NzIxOWUyLWUyOTUtNDMxZS1hOTljLTRkNDIxZTE1ZDAzYSIsImMiOjl9&pageName=24f8598d534d69b83d11" title="VIE/BTS Aviation Tracker — Power BI" height="620" >}}
 
 ## Über die Daten
 
