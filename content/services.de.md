@@ -1,7 +1,7 @@
 ---
 title: "Leistungen"
 date: 2026-09-07
-draft: false
+draft: true
 ShowToc: false
 ShowReadingTime: false
 disableShare: true
@@ -18,13 +18,13 @@ BI-Beratung und Analytik nach Maß — von einem einzelnen Dashboard bis zur kom
 {{< service-card icon="🔍" title="Daten-Audit" text="Ein unabhängiger Blick darauf, woher Ihre Zahlen wirklich stammen und wo ein Report Sie in die Irre führen könnte. Die Grundlage für vertrauenswürdige Entscheidungen." >}}
 {{< /services >}}
 
-## So läuft die Zusammenarbeit ab
+## So läuft das ab
 
 1. **Kurzes Erstgespräch** — worum es geht, welche Daten vorliegen, was das Ergebnis leisten soll.
 2. **Angebot & Umfang** — was genau Sie bekommen und bis wann.
 3. **Projektarbeit** — mit Zwischenständen, nicht erst am Ende.
 4. **Übergabe & Schulung** — damit Sie Report oder Pipeline auch ohne mich nutzen und anpassen können.
 
-Den genauen Preis besprechen wir je nach Projektumfang — schreiben Sie mir kurz, worum es geht.
+Den genauen Preis bespreche ich je nach Projektumfang — schreiben Sie mir kurz, worum es geht.
 
 {{< cta text="Kontakt aufnehmen" url="/contact/" >}}

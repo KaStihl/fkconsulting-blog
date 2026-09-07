@@ -1,7 +1,7 @@
 ---
 title: "Služby"
 date: 2026-09-07
-draft: false
+draft: true
 ShowToc: false
 ShowReadingTime: false
 disableShare: true
@@ -25,6 +25,6 @@ BI konzultácie a analytika šité na mieru — od jedného dashboardu až po ko
 3. **Práca na projekte** — s priebežnými ukážkami, nie až na konci.
 4. **Odovzdanie a zaškolenie** — aby ste report alebo pipeline vedeli používať a upravovať aj bez môjho zásahu.
 
-Konkrétnu cenu si vieme prebrať podľa rozsahu projektu — napíšte mi pár viet o tom, čo riešite.
+Konkrétnu cenu si viem prebrať podľa rozsahu projektu — napíšte mi pár viet o tom, čo riešite.
 
 {{< cta text="Napísať mi" url="/contact/" >}}

@@ -31,11 +31,6 @@ BI konzultácie a analytika pre malé aj stredné firmy — **Power BI dashboard
       url = "/about/"
       weight = 10
     [[languages.sk.menu.main]]
-      identifier = "services"
-      name = "Služby"
-      url = "/services/"
-      weight = 20
-    [[languages.sk.menu.main]]
       identifier = "projekty"
       name = "Projekty"
       url = "/projekty/"
@@ -72,11 +67,6 @@ BI consulting and analytics for small and mid-size businesses — **Power BI das
       url = "/about/"
       weight = 10
     [[languages.en.menu.main]]
-      identifier = "services"
-      name = "Services"
-      url = "/services/"
-      weight = 20
-    [[languages.en.menu.main]]
       identifier = "projekty"
       name = "Projects"
       url = "/projekty/"
@@ -112,11 +102,6 @@ BI-Beratung und Analytik für kleine und mittlere Unternehmen — **Power BI Das
       name = "Über mich"
       url = "/about/"
       weight = 10
-    [[languages.de.menu.main]]
-      identifier = "services"
-      name = "Leistungen"
-      url = "/services/"
-      weight = 20
     [[languages.de.menu.main]]
       identifier = "projekty"
       name = "Projekte"
