@@ -130,8 +130,12 @@ body {
 
 /* Mobile nav: hamburger toggle, pure CSS (works with JS off).
    The menu overflows and needs a horizontal scrollbar once it
-   holds 5 items + a language switcher, so below 900px it collapses
-   behind a toggle instead. */
+   holds 5 items + a language switcher, so below this width it
+   collapses behind a toggle instead. Generous margin here on
+   purpose: how much horizontal space 5 links + a language switcher
+   actually need varies with the visitor's OS font rendering, so
+   this triggers well before real-world layouts would ever get
+   tight, rather than being tuned to a single test environment. */
 .fk-nav-toggle-input {
   position: absolute;
   opacity: 0;
@@ -140,7 +144,7 @@ body {
 .fk-menu-toggle {
   display: none;
 }
-@media (max-width: 900px) {
+@media (max-width: 1300px) {
   .fk-menu-toggle {
     display: inline-flex;
     align-items: center;
