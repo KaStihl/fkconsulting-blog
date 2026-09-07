@@ -1,0 +1,553 @@
+/* ============================================================
+   FK Consult — brand + interactive theme for Hugo PaperMod
+   File: assets/css/extended/fk-consult-theme.css
+   PaperMod concatenates every file in assets/css/extended/*.css
+   after its own core CSS, so these rules win without !important.
+   Palette based on the FK Consult logo (chrome monogram, cobalt
+   arrow, navy background). Extends the prepared brand palette
+   with motion, depth (glassmorphism) and interactive components
+   used by the site's custom shortcodes.
+   ============================================================ */
+
+:root {
+  /* --- brand tokens ------------------------------------------ */
+  --fk-navy-900: #061322;
+  --fk-navy-800: #0B1A2B;
+  --fk-navy-700: #132A43;
+  --fk-navy-600: #1D3954;
+  --fk-navy-500: #142842;
+  --fk-blue-700: #2E4D7B;
+  --fk-blue-500: #476998;
+  --fk-blue-300: #78A9CE;
+  --fk-silver-700: #92979D;
+  --fk-silver-500: #ADB2B5;
+  --fk-silver-300: #DEDFE0;
+  --fk-white: #F7F7F7;
+
+  /* --- PaperMod variables: LIGHT mode -------------------------- */
+  --radius: 10px;
+  --theme: #FFFFFF;
+  --entry: #F3F5F8;
+  --primary: var(--fk-navy-500);
+  --secondary: #5A6A80;
+  --tertiary: #DCE1E8;
+  --content: #1F3047;
+  --code-block-bg: #0F2238;
+  --code-bg: #EEF2F7;
+  --border: #DEE3EA;
+  --fk-accent: var(--fk-blue-500);
+  --fk-accent-soft: rgba(71, 105, 152, 0.12);
+  --fk-card-bg: rgba(255, 255, 255, 0.72);
+  --fk-card-border: rgba(20, 40, 66, 0.1);
+  --fk-shadow: 0 10px 30px -12px rgba(11, 26, 43, 0.18);
+}
+
+/* --- PaperMod variables: DARK mode (navy, not grey) ------------- */
+:root[data-theme="dark"],
+.dark {
+  --theme: var(--fk-navy-800);
+  --entry: var(--fk-navy-700);
+  --primary: #F2F4F7;
+  --secondary: #A9B4C2;
+  --tertiary: #23405F;
+  --content: #D5DCE5;
+  --code-block-bg: #071322;
+  --code-bg: #0F2238;
+  --border: #1F3652;
+  --fk-accent: var(--fk-blue-300);
+  --fk-accent-soft: rgba(120, 169, 206, 0.14);
+  --fk-card-bg: rgba(19, 42, 67, 0.6);
+  --fk-card-border: rgba(120, 169, 206, 0.16);
+  --fk-shadow: 0 10px 34px -12px rgba(2, 8, 16, 0.55);
+}
+
+/* list pages (home, posts) use --code-bg as page background in light mode;
+   keep them plain white so the hero/cards read as the colour on the page */
+.list {
+  background: var(--theme);
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--theme);
+}
+
+/* ============================================================
+   Header — sticky blur, brand tile, active link underline
+   ============================================================ */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: color-mix(in srgb, var(--theme) 82%, transparent);
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.header.fk-scrolled {
+  border-bottom-color: var(--border);
+  box-shadow: 0 8px 24px -18px rgba(6, 19, 34, 0.5);
+}
+.logo a {
+  letter-spacing: -0.01em;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo a img {
+  border-radius: 7px;
+}
+.menu .active {
+  text-decoration-color: var(--fk-accent);
+  border-bottom-color: var(--fk-accent);
+  font-weight: 600;
+}
+#menu li a {
+  position: relative;
+}
+#menu li a span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 100%;
+  bottom: -4px;
+  height: 2px;
+  background: var(--fk-accent);
+  transition: right 0.25s ease;
+}
+#menu li a:hover span::after {
+  right: 0;
+}
+
+/* ============================================================
+   Homepage hero
+   ============================================================ */
+.home-info {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  padding: 56px 44px;
+  margin-bottom: 40px;
+  border: 1px solid var(--fk-card-border);
+  background:
+    radial-gradient(120% 140% at 8% 0%, rgba(71, 105, 152, 0.35) 0%, transparent 55%),
+    radial-gradient(90% 120% at 95% 15%, rgba(120, 169, 206, 0.28) 0%, transparent 50%),
+    linear-gradient(150deg, var(--fk-navy-900) 0%, var(--fk-navy-800) 45%, var(--fk-navy-600) 100%);
+  isolation: isolate;
+}
+.home-info::before,
+.home-info::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.55;
+  z-index: -1;
+  animation: fk-drift 16s ease-in-out infinite alternate;
+}
+.home-info::before {
+  width: 320px;
+  height: 320px;
+  background: var(--fk-blue-500);
+  top: -120px;
+  right: -80px;
+}
+.home-info::after {
+  width: 260px;
+  height: 260px;
+  background: var(--fk-blue-300);
+  bottom: -110px;
+  left: -60px;
+  animation-delay: -8s;
+}
+@keyframes fk-drift {
+  from { transform: translate(0, 0) scale(1); }
+  to   { transform: translate(24px, 18px) scale(1.08); }
+}
+.home-info .entry-header h1,
+.home-info .page-header h1 {
+  color: #F5F8FC !important;
+  font-size: 34px;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  margin-bottom: 18px;
+  animation: fk-fade-up 0.7s ease both;
+}
+.home-info .entry-content,
+.home-info p {
+  color: #C9D4E2 !important;
+  font-size: 17px;
+  line-height: 1.65;
+  animation: fk-fade-up 0.7s ease 0.1s both;
+}
+.home-info .entry-content strong {
+  color: #F5F8FC;
+}
+.home-info .entry-content a {
+  color: var(--fk-blue-300);
+  text-decoration-color: var(--fk-blue-300);
+}
+.home-info footer.entry-footer {
+  animation: fk-fade-up 0.7s ease 0.2s both;
+}
+@keyframes fk-fade-up {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fk-hero {
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(247, 247, 247, 0.14);
+  max-width: 360px;
+  margin: 0 0 24px;
+  box-shadow: var(--fk-shadow);
+  animation: fk-fade-up 0.7s ease both;
+}
+.fk-hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+@media screen and (max-width: 600px) {
+  .home-info { padding: 36px 24px; }
+  .home-info .entry-header h1 { font-size: 26px; }
+  .home-info .entry-content { font-size: 16px; }
+  .fk-hero { max-width: 100%; }
+}
+
+/* ============================================================
+   Buttons / CTAs
+   ============================================================ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+  border: 1px solid transparent;
+}
+.btn svg { transition: transform 0.2s ease; }
+.btn:hover svg { transform: translateX(3px); }
+.btn-primary {
+  background: linear-gradient(135deg, var(--fk-blue-700), var(--fk-blue-500));
+  color: #fff !important;
+  box-shadow: 0 8px 20px -8px rgba(46, 77, 123, 0.55);
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 26px -10px rgba(46, 77, 123, 0.6);
+}
+.btn-secondary {
+  background: transparent;
+  color: var(--primary) !important;
+  border-color: var(--border);
+}
+.btn-secondary:hover {
+  border-color: var(--fk-accent);
+  color: var(--fk-accent) !important;
+  transform: translateY(-2px);
+}
+.fk-cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin: 20px 0;
+}
+
+/* ============================================================
+   Reveal-on-scroll (progressive enhancement)
+   JS adds .reveal (hidden state) then .fk-in-view (revealed) —
+   without JS, elements are never hidden, so content always shows.
+   ============================================================ */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.fk-in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+  .home-info::before,
+  .home-info::after { animation: none !important; }
+  * { scroll-behavior: auto !important; }
+}
+
+/* ============================================================
+   Stats grid
+   ============================================================ */
+.fk-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 16px;
+  margin: 28px 0;
+}
+.stat-card {
+  padding: 22px 18px;
+  border-radius: var(--radius);
+  border: 1px solid var(--fk-card-border);
+  background: var(--fk-card-bg);
+  backdrop-filter: blur(8px);
+  text-align: center;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.stat-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--fk-accent);
+  box-shadow: var(--fk-shadow);
+}
+.stat-number {
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--fk-accent);
+  font-variant-numeric: tabular-nums;
+}
+.stat-label {
+  margin-top: 6px;
+  font-size: 13.5px;
+  color: var(--secondary);
+  line-height: 1.4;
+}
+
+/* ============================================================
+   Services grid
+   ============================================================ */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+  margin: 28px 0;
+}
+.service-card {
+  padding: 28px 24px;
+  border-radius: var(--radius);
+  border: 1px solid var(--fk-card-border);
+  background: var(--fk-card-bg);
+  backdrop-filter: blur(8px);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.service-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--fk-accent);
+  box-shadow: var(--fk-shadow);
+}
+.service-card .service-icon {
+  font-size: 28px;
+  display: inline-block;
+  margin-bottom: 14px;
+}
+.service-card h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  letter-spacing: -0.01em;
+}
+.service-card p {
+  margin: 0;
+  color: var(--secondary);
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+/* ============================================================
+   Dashboard embed
+   ============================================================ */
+.dashboard-frame {
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--fk-card-border);
+  box-shadow: var(--fk-shadow);
+  margin: 24px 0;
+  background: var(--fk-navy-800);
+}
+.dashboard-frame iframe {
+  display: block;
+  width: 100%;
+  border: 0;
+}
+.dashboard-placeholder {
+  border-radius: var(--radius);
+  border: 1px dashed var(--fk-card-border);
+  background: var(--fk-card-bg);
+  padding: 48px 28px;
+  text-align: center;
+  margin: 24px 0;
+}
+.dashboard-placeholder p {
+  margin: 6px 0;
+  color: var(--secondary);
+}
+.dashboard-placeholder p:first-child {
+  font-size: 20px;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+/* ============================================================
+   Contact
+   ============================================================ */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+  margin: 24px 0;
+}
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 20px;
+  border-radius: var(--radius);
+  border: 1px solid var(--fk-card-border);
+  background: var(--fk-card-bg);
+  text-decoration: none !important;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+.contact-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--fk-accent);
+}
+.contact-card .contact-icon {
+  font-size: 22px;
+}
+.contact-card .contact-label {
+  font-size: 12.5px;
+  color: var(--secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.contact-card .contact-value {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.fk-form {
+  margin: 24px 0;
+  display: grid;
+  gap: 14px;
+  max-width: 520px;
+}
+.fk-form label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--primary);
+  display: block;
+  margin-bottom: 6px;
+}
+.fk-form input,
+.fk-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--entry);
+  color: var(--content);
+  font-size: 15px;
+  font-family: inherit;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.fk-form input:focus,
+.fk-form textarea:focus {
+  outline: none;
+  border-color: var(--fk-accent);
+  box-shadow: 0 0 0 3px var(--fk-accent-soft);
+}
+.fk-form button {
+  justify-self: start;
+  cursor: pointer;
+}
+.fk-form-honeypot {
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ============================================================
+   Post cards — lift on hover instead of flat border-only
+   ============================================================ */
+.post-entry {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.post-entry:hover,
+.post-entry:focus-within {
+  transform: translateY(-4px);
+  border-color: var(--fk-accent);
+  box-shadow: var(--fk-shadow);
+}
+.entry-header h2 {
+  letter-spacing: -0.01em;
+}
+
+/* ============================================================
+   Article page
+   ============================================================ */
+.post-title,
+.md-content h1,
+.md-content h2,
+.md-content h3 {
+  letter-spacing: -0.015em;
+}
+.md-content a:not(.anchor) {
+  color: var(--fk-accent);
+  text-decoration-color: var(--fk-accent);
+}
+.md-content a:not(.anchor):hover {
+  color: var(--primary);
+}
+.md-content blockquote {
+  border-inline-start: 3px solid var(--fk-accent);
+  background: var(--fk-accent-soft);
+  border-radius: 0 8px 8px 0;
+}
+.md-content table th {
+  background: var(--code-bg);
+}
+
+/* ============================================================
+   Buttons / pagination / tags — accent edge on hover
+   ============================================================ */
+.paginav a:hover,
+.button:hover,
+.post-tags a:hover,
+.terms-tags a:hover {
+  border-color: var(--fk-accent);
+}
+
+/* ============================================================
+   Footer
+   ============================================================ */
+.footer {
+  border-top: 1px solid var(--border);
+}
+.social-icons a {
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+.social-icons a:hover {
+  transform: translateY(-2px);
+  color: var(--fk-accent);
+}
+
+/* ============================================================
+   Accessibility
+   ============================================================ */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--fk-accent);
+  outline-offset: 2px;
+}

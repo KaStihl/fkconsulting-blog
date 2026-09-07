@@ -1,0 +1,44 @@
+{{- define "main" }}
+
+{{- partial "home_info.html" . }}
+
+<section aria-label="Kľúčové čísla">
+  <div class="fk-stats-grid">
+    {{ partial "stat-card.html" (dict "value" "2" "suffix" "" "label" "letiská sledované naživo (VIE + BTS)") }}
+    {{ partial "stat-card.html" (dict "value" "3" "suffix" "" "label" "overiteľné oficiálne zdroje dát") }}
+    {{ partial "stat-card.html" (dict "value" "0" "suffix" "" "label" "odhadov — len primárne dáta") }}
+    {{ partial "stat-card.html" (dict "value" "100" "suffix" "%" "label" "kód a metodológia verejne na GitHube") }}
+  </div>
+</section>
+
+<section aria-label="Vybraný projekt">
+  <div class="service-card" data-animate>
+    <span class="service-icon">✈️</span>
+    <h3>VIE ⇄ BTS Aviation Tracker</h3>
+    <p>Automatizovaný dátový pipeline, ktorý mesačne sleduje počty pasažierov na letiskách Viedeň a Bratislava — a ukazuje, ako si nízkonákladové aerolinky presúvajú kapacitu medzi nimi.</p>
+    <div class="fk-cta-row">
+      <a class="btn btn-primary" href="{{ "projekty/vie-bts-tracker/" | absLangURL }}">
+        Čítať viac
+        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+      </a>
+      <a class="btn btn-secondary" href="{{ "dashboard/" | absLangURL }}">Zobraziť dashboard</a>
+    </div>
+  </div>
+</section>
+
+<section aria-label="Služby">
+  <div class="services-grid">
+    {{ partial "service-card.html" (dict "icon" "📊" "title" "Power BI dashboardy" "text" "Prehľadné, interaktívne reporty postavené na vašich dátach — od modelu až po finálny dizajn.") }}
+    {{ partial "service-card.html" (dict "icon" "⚙️" "title" "Automatizácia dát" "text" "Pipeline, ktoré samé zbierajú, čistia a aktualizujú dáta — bez ručnej práce každý mesiac.") }}
+    {{ partial "service-card.html" (dict "icon" "🧭" "title" "BI konzultácie" "text" "Pomôžem nastaviť dátovú stratégiu, zvoliť správne nástroje a naučiť tím pracovať s dátami.") }}
+  </div>
+  <div class="fk-cta-row">
+    <a class="btn btn-primary" href="{{ "services/" | absLangURL }}">
+      Pozrieť služby
+      <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+    </a>
+    <a class="btn btn-secondary" href="{{ "contact/" | absLangURL }}">Napísať mi</a>
+  </div>
+</section>
+
+{{- end }}

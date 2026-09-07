@@ -1,0 +1,6 @@
+{{- $value := .value }}
+{{- $suffix := .suffix | default "" }}
+<div class="stat-card" data-animate>
+  <div class="stat-number" data-counter-target="{{ $value }}" data-counter-suffix="{{ $suffix }}">{{ $value }}{{ $suffix }}</div>
+  <div class="stat-label">{{ .label }}</div>
+</div>

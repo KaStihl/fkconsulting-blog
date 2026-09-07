@@ -1,0 +1,43 @@
+{{- $email := .Get "email" }}
+{{- $linkedin := .Get "linkedin" }}
+{{- $netlify := eq (.Get "netlify") "true" }}
+<div class="contact-grid">
+  {{- with $email }}
+  <a class="contact-card" href="mailto:{{ . }}" data-animate>
+    <span class="contact-icon">✉️</span>
+    <span>
+      <span class="contact-label">Email</span><br>
+      <span class="contact-value">{{ . }}</span>
+    </span>
+  </a>
+  {{- end }}
+  {{- with $linkedin }}
+  <a class="contact-card" href="{{ . }}" target="_blank" rel="noopener noreferrer" data-animate>
+    <span class="contact-icon">💼</span>
+    <span>
+      <span class="contact-label">LinkedIn</span><br>
+      <span class="contact-value">Spojiť sa</span>
+    </span>
+  </a>
+  {{- end }}
+</div>
+
+{{- if $netlify }}
+<form class="fk-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-animate>
+  <input type="hidden" name="form-name" value="contact">
+  <p class="fk-form-honeypot"><label>Nevypĺňajte: <input name="bot-field"></label></p>
+  <div>
+    <label for="fk-name">Meno</label>
+    <input id="fk-name" type="text" name="name" required>
+  </div>
+  <div>
+    <label for="fk-email">Email</label>
+    <input id="fk-email" type="email" name="email" required>
+  </div>
+  <div>
+    <label for="fk-message">Správa</label>
+    <textarea id="fk-message" name="message" rows="5" required></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Odoslať správu</button>
+</form>
+{{- end }}

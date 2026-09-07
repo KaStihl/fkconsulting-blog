@@ -12,6 +12,13 @@ Tieto dva príbehy sú vlastne jeden. Susedné letisko naberá presne to, čo dr
 
 Pracujem ako BI konzultant a prišlo mi zvláštne, že to niekto nesleduje systematicky v číslach — len v novinových titulkoch. Tak som si na to postavil vlastný dátový pipeline.
 
+{{< stats >}}
+{{< stat value="2" label="letiská porovnávané naživo" >}}
+{{< stat value="3" label="primárne zdroje dát" >}}
+{{< stat value="7" label="automatizovaných úloh v pipeline" >}}
+{{< stat value="0" label="odhadov" >}}
+{{< /stats >}}
+
 ## Čo tento projekt robí
 
 Každý mesiac automaticky sťahujem oficiálne tlačové správy z Vienna Airport a Bratislava Airport a extrahujem z nich čísla o počte pasažierov, medziročnej zmene a kapacite. Žiadne odhady ani sekundárne zdroje — priamo z čísel, ktoré letiská samé publikujú.

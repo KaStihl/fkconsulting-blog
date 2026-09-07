@@ -1,13 +1,19 @@
 baseURL = "https://fkconsult.eu/"
 languageCode = "sk"
-title = "FKConsulting"
+title = "FK Consult"
 theme = "PaperMod"
 paginate = 10
 
+[markup]
+  [markup.goldmark.renderer]
+    unsafe = true
+
 [params]
   env = "production"
-  title = "FKConsulting"
-  description = "BI konzultácie, analytika a dátové projekty"
+  title = "FK Consult"
+  description = "BI konzultácie, analytika a dátové projekty — Power BI, automatizácia a dashboardy"
+  defaultTheme = "dark"
+  disableThemeToggle = false
   ShowReadingTime = true
   ShowShareButtons = true
   ShowPostNavLinks = true
@@ -17,28 +23,64 @@ paginate = 10
   comments = false
 
   [params.label]
-    text = "FKConsulting"
-    icon = "images/logo.png"
+    text = "FK Consult"
+    icon = "/logo/fk-monogram-tile.png"
     iconHeight = 32
 
+  [params.assets]
+    favicon = "/favicon.ico"
+    favicon16x16 = "/favicon-16x16.png"
+    favicon32x32 = "/favicon-32x32.png"
+    apple_touch_icon = "/apple-touch-icon.png"
+    theme_color = "#0B1A2B"
+    msapplication_TileColor = "#0B1A2B"
+
   [params.homeInfoParams]
-    Title = ""
-    Content = "![logo](/images/logo-horizontal.png)\n\nBI konzultácie a analytika — Power BI, automatizácia a dátové projekty. Aktuálny projekt: sledovanie leteckej dopravy medzi Viedňou a Bratislavou živými dátami."
+    Title = "Z dát k rozhodnutiam"
+    Content = """
+<div class="fk-hero" data-animate>
+  <img src="/logo/fk-consult-banner.jpg" width="949" height="672" alt="FK Consult — dátová analytika a BI konzultácie" loading="eager">
+</div>
+
+BI konzultácie a analytika pre malé aj stredné firmy — **Power BI dashboardy**, **automatizácia dátových tokov** a **konzultácie**, ktoré premenia tabuľky na rozhodnutia. Aktuálny showcase: živé sledovanie leteckej dopravy medzi [Viedňou a Bratislavou](/projekty/vie-bts-tracker/).
+"""
+
+  [[params.socialIcons]]
+    name = "github"
+    title = "GitHub"
+    url = "https://github.com/KaStihl"
+
+  [[params.socialIcons]]
+    name = "email"
+    title = "Email"
+    url = "mailto:ferdinand.fojtlin@gmail.com"
 
 [[menu.main]]
-  identifier = "posts"
-  name = "Články"
-  url = "/posts/"
+  identifier = "about"
+  name = "O mne"
+  url = "/about/"
   weight = 10
+
+[[menu.main]]
+  identifier = "services"
+  name = "Služby"
+  url = "/services/"
+  weight = 20
 
 [[menu.main]]
   identifier = "projekty"
   name = "Projekty"
   url = "/projekty/"
-  weight = 20
+  weight = 30
 
 [[menu.main]]
   identifier = "dashboard"
   name = "Dashboard"
   url = "/dashboard/"
-  weight = 30
+  weight = 40
+
+[[menu.main]]
+  identifier = "contact"
+  name = "Kontakt"
+  url = "/contact/"
+  weight = 50
