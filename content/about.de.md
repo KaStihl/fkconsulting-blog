@@ -9,7 +9,7 @@ ShowPostNavLinks: false
 ShowBreadCrumbs: true
 ---
 
-Ich heiße Ferdinand Fojtlin — die meisten nennen mich Fero. Neben meinem Job widme ich meine Freizeit etwas, das mir wirklich Spaß macht: Daten, Analytik und Power BI.
+Ich bin Fero. Ich arbeite Vollzeit, und meine Freizeit widme ich etwas, das mir wirklich Spaß macht: Daten, Analytik und Power BI.
 
 ## Wie ich das angehe
 

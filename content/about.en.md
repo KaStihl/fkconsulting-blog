@@ -9,7 +9,7 @@ ShowPostNavLinks: false
 ShowBreadCrumbs: true
 ---
 
-I'm Ferdinand Fojtlin — most people call me Fero. Alongside my day job, I spend my free time on something I genuinely enjoy: data, analytics, and Power BI.
+I'm Fero. I work full-time, and in my free time I spend it on something I genuinely enjoy: data, analytics, and Power BI.
 
 ## How I approach it
 

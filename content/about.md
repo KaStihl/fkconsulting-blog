@@ -9,7 +9,7 @@ ShowPostNavLinks: false
 ShowBreadCrumbs: true
 ---
 
-Volám sa Ferdinand Fojtlin, ale hovoria mi Fero. Popri práci sa venujem niečomu, čo ma jednoducho baví — dátam, analytike a Power BI.
+Som Fero. Pracujem na plný úväzok a vo voľnom čase sa venujem niečomu, čo ma jednoducho baví — dátam, analytike a Power BI.
 
 ## Ako k tomu pristupujem
 
