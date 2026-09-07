@@ -1,0 +1,52 @@
+home_stat_airports:
+  other: "live verfolgte Flughäfen (VIE + BTS)"
+home_stat_sources:
+  other: "überprüfbare offizielle Datenquellen"
+home_stat_noestimates:
+  other: "Schätzungen — nur Primärdaten"
+home_stat_opensource:
+  other: "Code und Methodik öffentlich auf GitHub"
+home_featured_title:
+  other: "VIE ⇄ BTS Aviation Tracker"
+home_featured_text:
+  other: "Eine automatisierte Datenpipeline, die monatlich die Passagierzahlen der Flughäfen Wien und Bratislava erfasst — und zeigt, wie Billigfluggesellschaften ihre Kapazitäten zwischen ihnen verschieben."
+home_featured_read:
+  other: "Mehr lesen"
+home_featured_dashboard:
+  other: "Dashboard ansehen"
+home_service1_title:
+  other: "Power BI Dashboards"
+home_service1_text:
+  other: "Übersichtliche, interaktive Reports auf Basis Ihrer Daten — vom Datenmodell bis zum finalen Design."
+home_service2_title:
+  other: "Datenautomatisierung"
+home_service2_text:
+  other: "Pipelines, die Daten selbstständig sammeln, bereinigen und aktualisieren — ohne monatliche Handarbeit."
+home_service3_title:
+  other: "BI-Beratung"
+home_service3_text:
+  other: "Ich helfe bei der Datenstrategie, der Wahl der richtigen Tools und schule Ihr Team im Umgang mit Daten."
+home_services_cta:
+  other: "Leistungen ansehen"
+home_contact_cta:
+  other: "Kontakt aufnehmen"
+dash_placeholder_title:
+  other: "📊 Interaktives Dashboard in Vorbereitung"
+dash_placeholder_text:
+  other: "Sobald der Power BI-Bericht im Web veröffentlicht ist, erscheint hier eine interaktive Grafik zum VIE/BTS-Verkehr."
+contact_email_label:
+  other: "Email"
+contact_linkedin_label:
+  other: "LinkedIn"
+contact_linkedin_value:
+  other: "Vernetzen"
+form_name_label:
+  other: "Name"
+form_email_label:
+  other: "Email"
+form_message_label:
+  other: "Nachricht"
+form_submit:
+  other: "Nachricht senden"
+form_honeypot_label:
+  other: "Bitte leer lassen:"

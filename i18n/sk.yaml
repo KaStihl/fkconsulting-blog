@@ -1,0 +1,52 @@
+home_stat_airports:
+  other: "letiská sledované naživo (VIE + BTS)"
+home_stat_sources:
+  other: "overiteľné oficiálne zdroje dát"
+home_stat_noestimates:
+  other: "odhadov — len primárne dáta"
+home_stat_opensource:
+  other: "kód a metodológia verejne na GitHube"
+home_featured_title:
+  other: "VIE ⇄ BTS Aviation Tracker"
+home_featured_text:
+  other: "Automatizovaný dátový pipeline, ktorý mesačne sleduje počty pasažierov na letiskách Viedeň a Bratislava — a ukazuje, ako si nízkonákladové aerolinky presúvajú kapacitu medzi nimi."
+home_featured_read:
+  other: "Čítať viac"
+home_featured_dashboard:
+  other: "Zobraziť dashboard"
+home_service1_title:
+  other: "Power BI dashboardy"
+home_service1_text:
+  other: "Prehľadné, interaktívne reporty postavené na vašich dátach — od modelu až po finálny dizajn."
+home_service2_title:
+  other: "Automatizácia dát"
+home_service2_text:
+  other: "Pipeline, ktoré samé zbierajú, čistia a aktualizujú dáta — bez ručnej práce každý mesiac."
+home_service3_title:
+  other: "BI konzultácie"
+home_service3_text:
+  other: "Pomôžem nastaviť dátovú stratégiu, zvoliť správne nástroje a naučiť tím pracovať s dátami."
+home_services_cta:
+  other: "Pozrieť služby"
+home_contact_cta:
+  other: "Napísať mi"
+dash_placeholder_title:
+  other: "📊 Interaktívny dashboard sa pripravuje"
+dash_placeholder_text:
+  other: "Po zverejnení Power BI reportu (Publish to web) sa tu zobrazí živý, klikateľný graf VIE/BTS dopravy."
+contact_email_label:
+  other: "Email"
+contact_linkedin_label:
+  other: "LinkedIn"
+contact_linkedin_value:
+  other: "Spojiť sa"
+form_name_label:
+  other: "Meno"
+form_email_label:
+  other: "Email"
+form_message_label:
+  other: "Správa"
+form_submit:
+  other: "Odoslať správu"
+form_honeypot_label:
+  other: "Nevypĺňajte:"

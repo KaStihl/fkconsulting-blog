@@ -6,7 +6,7 @@
   <a class="contact-card" href="mailto:{{ . }}" data-animate>
     <span class="contact-icon">✉️</span>
     <span>
-      <span class="contact-label">Email</span><br>
+      <span class="contact-label">{{ i18n "contact_email_label" }}</span><br>
       <span class="contact-value">{{ . }}</span>
     </span>
   </a>
@@ -15,8 +15,8 @@
   <a class="contact-card" href="{{ . }}" target="_blank" rel="noopener noreferrer" data-animate>
     <span class="contact-icon">💼</span>
     <span>
-      <span class="contact-label">LinkedIn</span><br>
-      <span class="contact-value">Spojiť sa</span>
+      <span class="contact-label">{{ i18n "contact_linkedin_label" }}</span><br>
+      <span class="contact-value">{{ i18n "contact_linkedin_value" }}</span>
     </span>
   </a>
   {{- end }}
@@ -25,19 +25,19 @@
 {{- if $netlify }}
 <form class="fk-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-animate>
   <input type="hidden" name="form-name" value="contact">
-  <p class="fk-form-honeypot"><label>Nevypĺňajte: <input name="bot-field"></label></p>
+  <p class="fk-form-honeypot"><label>{{ i18n "form_honeypot_label" }} <input name="bot-field"></label></p>
   <div>
-    <label for="fk-name">Meno</label>
+    <label for="fk-name">{{ i18n "form_name_label" }}</label>
     <input id="fk-name" type="text" name="name" required>
   </div>
   <div>
-    <label for="fk-email">Email</label>
+    <label for="fk-email">{{ i18n "form_email_label" }}</label>
     <input id="fk-email" type="email" name="email" required>
   </div>
   <div>
-    <label for="fk-message">Správa</label>
+    <label for="fk-message">{{ i18n "form_message_label" }}</label>
     <textarea id="fk-message" name="message" rows="5" required></textarea>
   </div>
-  <button type="submit" class="btn btn-primary">Odoslať správu</button>
+  <button type="submit" class="btn btn-primary">{{ i18n "form_submit" }}</button>
 </form>
 {{- end }}

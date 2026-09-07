@@ -1,0 +1,52 @@
+home_stat_airports:
+  other: "airports tracked live (VIE + BTS)"
+home_stat_sources:
+  other: "verifiable official data sources"
+home_stat_noestimates:
+  other: "estimates — only primary data"
+home_stat_opensource:
+  other: "code and methodology public on GitHub"
+home_featured_title:
+  other: "VIE ⇄ BTS Aviation Tracker"
+home_featured_text:
+  other: "An automated data pipeline that tracks monthly passenger numbers at Vienna and Bratislava airports — and shows how low-cost carriers shift capacity between them."
+home_featured_read:
+  other: "Read more"
+home_featured_dashboard:
+  other: "View dashboard"
+home_service1_title:
+  other: "Power BI dashboards"
+home_service1_text:
+  other: "Clear, interactive reports built on your data — from the model to the final design."
+home_service2_title:
+  other: "Data automation"
+home_service2_text:
+  other: "Pipelines that collect, clean and update data on their own — no manual work every month."
+home_service3_title:
+  other: "BI consulting"
+home_service3_text:
+  other: "I'll help you set a data strategy, pick the right tools, and train your team to work with data."
+home_services_cta:
+  other: "View services"
+home_contact_cta:
+  other: "Get in touch"
+dash_placeholder_title:
+  other: "📊 Interactive dashboard coming soon"
+dash_placeholder_text:
+  other: "Once the Power BI report is published to the web, a live, clickable VIE/BTS traffic chart will appear here."
+contact_email_label:
+  other: "Email"
+contact_linkedin_label:
+  other: "LinkedIn"
+contact_linkedin_value:
+  other: "Connect"
+form_name_label:
+  other: "Name"
+form_email_label:
+  other: "Email"
+form_message_label:
+  other: "Message"
+form_submit:
+  other: "Send message"
+form_honeypot_label:
+  other: "Leave this empty:"
