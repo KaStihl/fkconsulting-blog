@@ -10,6 +10,10 @@
    ============================================================ */
 
 :root {
+  /* --- layout: wider than PaperMod's blog-column default ------- */
+  --nav-width: 1180px;
+  --main-width: 900px;
+
   /* --- brand tokens ------------------------------------------ */
   --fk-navy-900: #061322;
   --fk-navy-800: #0B1A2B;
@@ -122,6 +126,63 @@ body {
 }
 #menu li a:hover span::after {
   right: 0;
+}
+
+/* Mobile nav: hamburger toggle, pure CSS (works with JS off).
+   The menu overflows and needs a horizontal scrollbar once it
+   holds 5 items + a language switcher, so below 900px it collapses
+   behind a toggle instead. */
+.fk-nav-toggle-input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.fk-menu-toggle {
+  display: none;
+}
+@media (max-width: 900px) {
+  .fk-menu-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    margin-inline-start: auto;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--primary);
+    cursor: pointer;
+  }
+  .fk-menu-toggle .fk-icon-close {
+    display: none;
+  }
+  .fk-nav-toggle-input:checked ~ .fk-menu-toggle .fk-icon-open {
+    display: none;
+  }
+  .fk-nav-toggle-input:checked ~ .fk-menu-toggle .fk-icon-close {
+    display: block;
+  }
+  .menu {
+    display: none;
+    flex-basis: 100%;
+    flex-direction: column;
+    overflow: visible;
+    white-space: normal;
+    row-gap: 2px;
+    margin-top: 8px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+  }
+  .fk-nav-toggle-input:checked ~ .menu {
+    display: flex;
+  }
+  .menu li {
+    width: 100%;
+  }
+  .menu a {
+    display: block;
+    padding: 10px 2px;
+  }
 }
 
 /* ============================================================
