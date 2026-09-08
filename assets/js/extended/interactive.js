@@ -1,4 +1,4 @@
-/* FK Consult — small, dependency-free interactive layer.
+/* FK's Lab — small, dependency-free interactive layer.
    Progressive enhancement only: every element below is fully
    visible/usable without this script running. */
 (function () {

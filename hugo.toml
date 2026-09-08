@@ -1,5 +1,5 @@
-baseURL = "https://fkconsult.eu/"
-title = "FK Consult"
+baseURL = "https://fkslab.netlify.app/"
+title = "FK's LAB"
 theme = "PaperMod"
 paginate = 10
 defaultContentLanguage = "sk"
@@ -15,15 +15,15 @@ defaultContentLanguageInSubdir = false
     locale = "sk-SK"
     weight = 1
     [languages.sk.params]
-      description = "BI konzultácie, analytika a dátové projekty — Power BI, automatizácia a dashboardy"
+      description = "Osobné dátové projekty — Power BI, automatizácia a analytika"
       [languages.sk.params.homeInfoParams]
         Title = "Z dát k rozhodnutiam"
         Content = """
 <div class="fk-hero" data-animate>
-  <img src="/logo/fk-consult-banner.jpg" width="949" height="672" alt="FK Consult — dátová analytika a BI konzultácie" loading="eager">
+  <img src="/logo/fk-lab-logo.png" width="1780" height="592" alt="FK's Lab" loading="eager">
 </div>
 
-BI konzultácie a analytika pre malé aj stredné firmy — **Power BI dashboardy**, **automatizácia dátových tokov** a **konzultácie**, ktoré premenia tabuľky na rozhodnutia. Aktuálny showcase: živé sledovanie leteckej dopravy medzi [Viedňou a Bratislavou](/projekty/vie-bts-tracker/).
+Osobné dátové projekty popri plnom úväzku — **Power BI dashboardy**, **automatizácia** a **analytika**, ktoré ma jednoducho bavia. Aktuálny showcase: živé sledovanie leteckej dopravy medzi [Viedňou a Bratislavou](/projekty/vie-bts-tracker/).
 """
     [[languages.sk.menu.main]]
       identifier = "about"
@@ -51,15 +51,15 @@ BI konzultácie a analytika pre malé aj stredné firmy — **Power BI dashboard
     locale = "en-US"
     weight = 2
     [languages.en.params]
-      description = "BI consulting, analytics and data projects — Power BI, automation and dashboards"
+      description = "Personal data projects — Power BI, automation and analytics"
       [languages.en.params.homeInfoParams]
         Title = "Turning data into decisions"
         Content = """
 <div class="fk-hero" data-animate>
-  <img src="/logo/fk-consult-banner.jpg" width="949" height="672" alt="FK Consult — data analytics and BI consulting" loading="eager">
+  <img src="/logo/fk-lab-logo.png" width="1780" height="592" alt="FK's Lab" loading="eager">
 </div>
 
-BI consulting and analytics for small and mid-size businesses — **Power BI dashboards**, **data pipeline automation**, and **consulting** that turn spreadsheets into decisions. Current showcase: live tracking of air traffic between [Vienna and Bratislava](/projekty/vie-bts-tracker/).
+Personal data projects on the side of a full-time job — **Power BI dashboards**, **automation**, and **analytics** I genuinely enjoy. Current showcase: live tracking of air traffic between [Vienna and Bratislava](/projekty/vie-bts-tracker/).
 """
     [[languages.en.menu.main]]
       identifier = "about"
@@ -87,15 +87,15 @@ BI consulting and analytics for small and mid-size businesses — **Power BI das
     locale = "de-DE"
     weight = 3
     [languages.de.params]
-      description = "BI-Beratung, Analytik und Datenprojekte — Power BI, Automatisierung und Dashboards"
+      description = "Persönliche Datenprojekte — Power BI, Automatisierung und Analytik"
       [languages.de.params.homeInfoParams]
         Title = "Aus Daten werden Entscheidungen"
         Content = """
 <div class="fk-hero" data-animate>
-  <img src="/logo/fk-consult-banner.jpg" width="949" height="672" alt="FK Consult — Datenanalyse und BI-Beratung" loading="eager">
+  <img src="/logo/fk-lab-logo.png" width="1780" height="592" alt="FK's Lab" loading="eager">
 </div>
 
-BI-Beratung und Analytik für kleine und mittlere Unternehmen — **Power BI Dashboards**, **Automatisierung von Datenprozessen** und **Beratung**, die aus Tabellen Entscheidungen macht. Aktuelles Projekt: Live-Tracking des Flugverkehrs zwischen [Wien und Bratislava](/projekty/vie-bts-tracker/).
+Persönliche Datenprojekte neben einer Vollzeitstelle — **Power BI Dashboards**, **Automatisierung** und **Analytik**, die mir wirklich Spaß machen. Aktuelles Projekt: Live-Tracking des Flugverkehrs zwischen [Wien und Bratislava](/projekty/vie-bts-tracker/).
 """
     [[languages.de.menu.main]]
       identifier = "about"
@@ -120,7 +120,7 @@ BI-Beratung und Analytik für kleine und mittlere Unternehmen — **Power BI Das
 
 [params]
   env = "production"
-  title = "FK Consult"
+  title = "FK's Lab"
   defaultTheme = "dark"
   disableThemeToggle = false
   displayFullLangName = true
@@ -133,7 +133,7 @@ BI-Beratung und Analytik für kleine und mittlere Unternehmen — **Power BI Das
   comments = false
 
   [params.label]
-    text = "FK Consult"
+    text = "FK's Lab"
     icon = "/logo/fk-monogram-tile.png"
     iconHeight = 32
 
